@@ -1,267 +1,298 @@
 <!DOCTYPE html>
 <!-- saved from url=(0022)https://rainymood.com/ -->
-<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Rainy Mood</title>
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<style>html, body {
-height: 100%;
-}
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rainy Mood</title>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-html {
-	color: #222;
-	line-height: 1.4;
-}
+    <style>html, body {
+        height: 100%;
+    }
 
-body {
-margin: 0;
-background-position:center;
-background-size:auto 100%;
-background-size:cover;
-background-repeat:no-repeat;
-background-color:#000;
-font-size: 20px;
-color: #fff;
-}
+    html {
+        color: #222;
+        line-height: 1.4;
+    }
 
-
-* {
-font-family: 'marcellus_scregular', serif;
-text-shadow: 0px 0px 15px rgba(0,0,0,0.55);
-}
-
-reg {
-	font-size:20px;
-	line-height:0;
-}
-
-img {
-border: 0;
-vertical-align: middle;
-}
+    body {
+        margin: 0;
+        background-position: center;
+        background-size: auto 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #000;
+        font-size: 20px;
+        color: #fff;
+    }
 
 
-a {color:#fff;}
+    * {
+        font-family: 'marcellus_scregular', serif;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+    }
 
-h1, h2 {
-margin: 0;
-cursor: default;
-}
 
-h1 {
-font-size:80px;
-line-height:80px;
-}
+    img {
+        border: 0;
+        vertical-align: middle;
+    }
 
-h2 {
-font-size:20px;
-line-height:24px;
-}
 
-p {
-	cursor:default;
-}
+    a {
+        color: #fff;
+    }
 
-.center-container {
-width: 100%;
-height: 100%;
-overflow: visible;
-text-align:center;
-}
+    h1, h2 {
+        margin: 0;
+        cursor: default;
+    }
 
-.center-container:after,
-.center-block {
-display: inline-block;
-vertical-align: middle;
-}
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
 
-.center-container:after {
-content: '';
-height: 100%;
-margin-left: -0.25em;
-}
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
 
-.center-block {
-max-width: 98%;
-}
+    p {
+        cursor: default;
+    }
 
-/* media queries */
+    .center-container {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        text-align: center;
+    }
 
-@media only screen and (max-width: 550px){
-	h1 {
-		font-size: 45px;
-		line-height: 45px;
-	}
-	h2 {
-		font-size: 18px;
-		line-height: 20px;
-		}
-	body {
-		font-size: 18px;
-		line-height:20px;
-	}
-}
+    .center-container:after,
+    .center-block {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-/* New Audio Button 2018 */
+    .center-container:after {
+        content: '';
+        height: 100%;
+        margin-left: -0.25em;
+    }
 
-#audioplayerskin{
-  width: 300px;
-  height: auto;
-  margin: auto auto 20px auto;
+    .center-block {
+        max-width: 98%;
+    }
 
-  text-align:center;
-  background-color: rgba(5, 173, 13, 0.49);
-  background-color:transparent;
-}
+    /* media queries */
 
-#pButton{
-  height:130px;
-  width: 130px;
-  border: none;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline:none;
-}
+    @media only screen and (max-width: 550px) {
+        h1 {
+            font-size: 45px;
+            line-height: 45px;
+        }
 
-.play{background: url('https://2sinx.github.io/img/play4.png') ;}
-.pause{background: url('https://2sinx.github.io/img/pause4.png') ;}
+        h2 {
+            font-size: 18px;
+            line-height: 20px;
+        }
 
-#volume_control{
-  margin:auto;
-  margin-top:0px;margin-bottom:0px;
-  padding-top:0px;padding-bottom:0px;
-  width:50%;
-}
+        body {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
 
-/* range style from http://danielstern.ca/range.css/#/ */
-/* the IE thumb was modified to look square */
+    /* New Audio Button 2018 */
 
-input[type=range] {
-  -webkit-appearance: none;
-  width: 100%;
-  margin: 6.05px 0;
-}
-input[type=range]:focus {
-  outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 2.9px;
-  cursor: pointer;
-  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
-  background: #ffffff;
-  border-radius: 0px;
-  border: 0px solid #000000;
-}
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0px solid #ffffff;
-  height: 15px;
-  width: 15px;
-  border-radius: 50px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -6.05px;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
-}
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 2.9px;
-  cursor: pointer;
-  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
-  background: #ffffff;
-  border-radius: 0px;
-  border: 0px solid #000000;
-}
-input[type=range]::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0px solid #ffffff;
-  height: 15px;
-  width: 15px;
-  border-radius: 50px;
-  background: #ffffff;
-  cursor: pointer;
-}
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 2.9px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-input[type=range]::-ms-fill-lower {
-  background: #f2f2f2;
-  border: 0px solid #000000;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
-}
-input[type=range]::-ms-fill-upper {
-  background: #ffffff;
-  border: 0px solid #000000;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
-}
-input[type=range]::-ms-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0px solid #ffffff;
-  height: 15px;
-  width: 15px;
-  border-radius: 0px;
-  background: #ffffff;
-  cursor: pointer;
-  height: 17.9px; /* was 2.9px */
-}
-input[type=range]:focus::-ms-fill-lower {
-  background: #ffffff;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #ffffff;
-}</style>
+    #audioplayerskin {
+        width: 300px;
+        height: auto;
+        margin: auto auto 20px auto;
+
+        text-align: center;
+        background-color: rgba(5, 173, 13, 0.49);
+        background-color: transparent;
+    }
+
+    #pButton {
+        height: 130px;
+        width: 130px;
+        border: none;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        outline: none;
+    }
+
+    .play {
+        background: url('https://2sinx.github.io/img/play4.png');
+    }
+
+    .pause {
+        background: url('https://2sinx.github.io/img/pause4.png');
+    }
+
+    #volume_control {
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        width: 50%;
+    }
+
+    /* range style from http://danielstern.ca/range.css/#/ */
+    /* the IE thumb was modified to look square */
+
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 6.05px 0;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2.9px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+        background: #ffffff;
+        border-radius: 0px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #ffffff;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -6.05px;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #ffffff;
+    }
+
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 2.9px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+        background: #ffffff;
+        border-radius: 0px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #ffffff;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+    }
+
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 2.9px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+
+    input[type=range]::-ms-fill-lower {
+        background: #f2f2f2;
+        border: 0px solid #000000;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+    }
+
+    input[type=range]::-ms-fill-upper {
+        background: #ffffff;
+        border: 0px solid #000000;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+    }
+
+    input[type=range]::-ms-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #ffffff;
+        height: 15px;
+        width: 15px;
+        border-radius: 0px;
+        background: #ffffff;
+        cursor: pointer;
+        height: 17.9px; /* was 2.9px */
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: #ffffff;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: #ffffff;
+    }</style>
 </head>
 <body style="background-image:url('https://2sinx.github.io/img/75.jpg');">
-<div class="center-container">
-<div class="center-block">
-<div id="audioplayerskin">
-    <button id="pButton" class="pause" onclick="playAudio()"></button>
-    <div id="volume_control">
-       <input type="range" oninput="setVolume(this.value)" onchange="setVolume(this.value)" id="rngVolume" min="0" max="1" step="0.01" value="1">
+<div class="center-container" >
+    <div class="center-block">
+        <div id="audioplayerskin">
+            <button id="pButton" class="pause" onclick="playAudio()"></button>
+            <div id="volume_control">
+                <input type="range" oninput="setVolume(this.value)" onchange="setVolume(this.value)" id="rngVolume"
+                       min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+        <audio id="audioplayer" loop="loop">
+            <source src="https://2sinx.github.io/music/0.mp4" type="audio/mp4">
+            <source src="track.ogg" type="audio/ogg">
+            <source src="track.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            var music = document.getElementById('audioplayer');
+
+            function playAudio() {
+                if (music.paused) {
+                    music.play();
+                    pButton.className = "";
+                    pButton.className = "pause";
+
+                    /* Tell Analytics about longSession */
+                    var anc = false;
+                    window.setInterval(function () {
+                        if (!anc) {
+                            ga('send', 'event', 'longSession15', 'longSession15');
+                            anc = true;
+                        }
+                    }, 900000);
+
+                } else {
+                    music.pause();
+                    pButton.className = "";
+                    pButton.className = "play";
+                }
+            }
+
+            function setVolume(volume) {
+                music.volume = volume;
+            }
+        </script>
+        <h1>Rainy Mood</h1>
     </div>
-</div>
-    <audio id="audioplayer" loop="loop">
-        <source src="https://2sinx.github.io/music/0.mp4" type="audio/mp4">
-        <source src="track.ogg" type="audio/ogg">
-        <source src="track.mp3" type="audio/mpeg">
-     </audio>
-<script>
-var music = document.getElementById('audioplayer');
-function playAudio() {
-if (music.paused) {
-music.play();
-pButton.className = "";
-pButton.className = "pause";
-
-/* Tell Analytics about longSession */
-var anc=false;
-window.setInterval(function(){
-	if (!anc) { ga('send','event','longSession15','longSession15'); anc=true; }
-	}, 900000);
-
-} else {
-music.pause();
-pButton.className = "";
-pButton.className = "play";
-}}
-function setVolume(volume){music.volume = volume;}
-</script>
-<h1>Rainy Mood</h1>
-</div>
 </div>
 </div>
 </body>
