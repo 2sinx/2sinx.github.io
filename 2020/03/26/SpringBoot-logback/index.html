@@ -20,8 +20,8 @@
 <meta property="og:site_name" content="2sinx">
 <meta property="og:description" content="spring-logback参考1参考2参考3 1.依赖实际开发中我们不需要直接添加该依赖，你会发现spring-boot-starter其中包含了 spring-boot-starter-logging，该依赖内容就是 Spring Boot 默认的日志框架 logback。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-26T14:01:50.835Z">
-<meta property="article:modified_time" content="2020-03-26T14:01:50.835Z">
+<meta property="article:published_time" content="2020-03-26T14:12:35.785Z">
+<meta property="article:modified_time" content="2020-03-26T14:12:35.786Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
   
@@ -212,7 +212,7 @@
         </span>
 
 <a href="/2020/03/26/SpringBoot-logback/" class="archive-article-date">
-  <time datetime="2020-03-26T14:01:50.835Z" itemprop="datePublished"><i
+  <time datetime="2020-03-26T14:12:35.785Z" itemprop="datePublished"><i
       class="icon-calendar icon"></i>2020-03-26</time>
 </a>
 
@@ -247,7 +247,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="spring-logback"><a href="#spring-logback" class="headerlink" title="spring-logback"></a>spring-logback</h2><p><a href="https://www.cnblogs.com/wangdaijun/p/7054114.html" target="_blank" rel="noopener">参考1</a><a href="https://blog.csdn.net/quincuntial/article/details/54292917" target="_blank" rel="noopener">参考2</a><br><a href="https://2sinx.github.io/myresource/Logback.pdf">参考3</a></p>
+<h2 id="spring-logback"><a href="#spring-logback" class="headerlink" title="spring-logback"></a>spring-logback</h2><p><a href="https://www.cnblogs.com/wangdaijun/p/7054114.html" target="_blank" rel="noopener">参考1</a><a href="https://blog.csdn.net/quincuntial/article/details/54292917" target="_blank" rel="noopener">参考2</a><a href="https://2sinx.github.io/myresource/Logback.pdf">参考3</a></p>
 <h3 id="1-依赖"><a href="#1-依赖" class="headerlink" title="1.依赖"></a>1.依赖</h3><p>实际开发中我们不需要直接添加该依赖，你会发现spring-boot-starter其中包含了 spring-boot-starter-logging，该依赖内容就是 Spring Boot 默认的日志框架 logback。</p>
 <a id="more"></a>
 <h3 id="2-参数配置"><a href="#2-参数配置" class="headerlink" title="2.参数配置"></a>2.参数配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">logging.file=指定日志文件的位置(只支持默认的Logback设置。)</span><br><span class="line">logging.path=指定日志文件存放的目录，自动在该目录下创建spring.log日志文件(只支持默认的Logback设置。)</span><br><span class="line"><span class="comment">##那些包使用怎样的日志级别 logging.level.包名，指定某个包下日志的级别,会覆盖logback配置文件中设置的日志级别</span></span><br><span class="line">logging.level.root=warn</span><br><span class="line">logging.level.com.springboot.controllers=info</span><br><span class="line"></span><br><span class="line">logging.config=指定logback的配置文件的位置，默认在resources目录下的logback-spring.xml</span><br><span class="line">logging.exception-conversion-word=当日志出现异常时会用到这个转换词。</span><br><span class="line">logging.file.max-history= 日志保存时间(只支持默认的Logback设置。)</span><br><span class="line">logging.file.max-size=  日志文件最大尺寸(只支持默认的Logback设置。)</span><br><span class="line">logging.pattern.console=用在控制台中的日志模式(stdout)。(只支持默认的Logback设置。)</span><br><span class="line">logging.pattern.dateformat=日志中日期模式(只支持默认的Logback设置。)</span><br><span class="line">logging.pattern.file=用在文件中的日志模式 (如果启用LOG_FILE)。(只支持默认的Logback设置。)</span><br><span class="line">logging.pattern.level=这种模式用来实施日志级别(默认%5p)。 (只支持默认的Logback设置。)</span><br><span class="line">logging.register-shutdown-hook=</span><br></pre></td></tr></table></figure>
@@ -346,6 +346,15 @@
 
   
   <nav id="article-nav">
+    
+      <a href="/2020/03/26/logback%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9D%97/" id="article-nav-newer" class="article-nav-link-wrap">
+        <i class="icon-circle-left"></i>
+        <div class="article-nav-title">
+          
+            logback基本模块
+          
+        </div>
+      </a>
     
     
       <a href="/2020/03/21/java-thread/" id="article-nav-older" class="article-nav-link-wrap">
