@@ -1,0 +1,23 @@
+@startuml
+start
+partition 第一次标记 {
+if (对象是否可达?) then (是)
+  stop
+else (否)
+  :设置需要回收标记;
+if (执行finalize()方法?) then (否)
+else (是)
+:将对象放到F-Queue队列中执行finalize()方法;
+endif
+endif
+}
+partition 第二次标记 {
+if (是否重新可达?) then (否)
+  :设置需要回收标记;
+  :回收对象;
+else (是)
+ :将对象从回收集合中移除;
+endif
+}
+stop
+@enduml
