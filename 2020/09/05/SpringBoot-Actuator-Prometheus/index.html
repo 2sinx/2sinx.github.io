@@ -7,25 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://2sinx.github.io">
   <title>
-    画图工具 |
+    SpringBoot-Actuator-Prometheus |
     
     2sinx</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="plantuml">
+  <meta name="description" content="SpringbootActuator 提供了用于生产环境以http端点以及JMX方式监控应用的功能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画图工具">
-<meta property="og:url" content="https://2sinx.github.io/2020/07/03/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:title" content="SpringBoot-Actuator-Prometheus">
+<meta property="og:url" content="https://2sinx.github.io/2020/09/05/SpringBoot-Actuator-Prometheus/index.html">
 <meta property="og:site_name" content="2sinx">
-<meta property="og:description" content="plantuml">
+<meta property="og:description" content="SpringbootActuator 提供了用于生产环境以http端点以及JMX方式监控应用的功能">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
-<meta property="article:published_time" content="2020-07-03T00:43:32.197Z">
-<meta property="article:modified_time" content="2020-07-03T00:43:32.198Z">
+<meta property="article:published_time" content="2020-09-05T02:28:18.084Z">
+<meta property="article:modified_time" content="2020-09-05T02:28:18.085Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
   
     <link rel="alternative" href="/atom.xml" title="2sinx" type="application/atom+xml">
   
@@ -192,7 +190,7 @@
                   class="anm-canvas"></canvas>
         </div>
         <div id="js-content" class="content-ll">
-          <article id="post-画图工具"
+          <article id="post-SpringBoot-Actuator-Prometheus"
          class="article article-type-post " itemscope
          itemprop="blogPost">
   <div class="article-inner">
@@ -201,7 +199,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      画图工具
+      SpringBoot-Actuator-Prometheus
     </h1>
   
 
@@ -213,9 +211,9 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/07/03/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-07-03T00:43:32.197Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-07-03</time>
+<a href="/2020/09/05/SpringBoot-Actuator-Prometheus/" class="archive-article-date">
+  <time datetime="2020-09-05T02:28:18.084Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2020-09-05</time>
 </a>
 
         
@@ -228,7 +226,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">51字</span>
+      <span class="post-count">284字</span>
     </span>
   </span>
 
@@ -248,12 +246,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="plantuml"><a href="#plantuml" class="headerlink" title="plantuml"></a>plantuml</h2><a id="more"></a>
-<h4 id="idea中安装plantuml"><a href="#idea中安装plantuml" class="headerlink" title="idea中安装plantuml"></a>idea中安装plantuml</h4><p>如果出现下面问题,还需要安装Graphviz<br><img src="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png" width="30%"></p>
-<pre><code class="bash">brew install Graphviz</code></pre>
-<p>前提是安装过brew，如果没有安装 参考<br><a href="https://www.mayanpeng.cn/archives/131.html" target="_blank" rel="noopener">brew安装</a><br><a href="https://plantuml.com" target="_blank" rel="noopener">plantuml官网</a><br><a href="https://www.jianshu.com/p/a6bd7e3048ef" target="_blank" rel="noopener">plantuml插件安装</a><br><a href="https://www.cnblogs.com/tulintao/p/11134877.html" target="_blank" rel="noopener">brew数据源替换</a></p>
-
+        <p>SpringbootActuator 提供了用于生产环境以http端点以及JMX方式监控应用的功能<a id="more"></a></p>
+<h4 id="1-依赖"><a href="#1-依赖" class="headerlink" title="1. 依赖"></a>1. 依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.0.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-Endpoints"><a href="#2-Endpoints" class="headerlink" title="2. Endpoints"></a>2. Endpoints</h4><p> Endpoint: 监测点, 通过监测点获取监测数据。</p>
+<h5 id="2-1-内置EndPoints"><a href="#2-1-内置EndPoints" class="headerlink" title="2.1 内置EndPoints"></a>2.1 内置EndPoints</h5><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>env</td>
+<td>查询ConfigurableEnvironment中的属性信息</td>
+</tr>
+<tr>
+<td>health</td>
+<td>查询应用的健康状况</td>
+</tr>
+<tr>
+<td>loggers</td>
+<td>查询和修改应用日志配置</td>
+</tr>
+<tr>
+<td>shutdown</td>
+<td>关闭应用</td>
+</tr>
+<tr>
+<td>threaddump</td>
+<td>执行线程转储动作</td>
+</tr>
+<tr>
+<td>heapdump</td>
+<td>下载线程转储文件</td>
+</tr>
+<tr>
+<td>prometheus</td>
+<td>以能够被Prometheus服务器识别的格式提供指标数据</td>
+</tr>
+<tr>
+<td>……….</td>
+<td>还有其他EndPoint参见官网</td>
+</tr>
+</tbody></table>
+<h5 id="2-2-对外暴露EndPoint"><a href="#2-2-对外暴露EndPoint" class="headerlink" title="2.2 对外暴露EndPoint"></a>2.2 对外暴露EndPoint</h5><p>监测点会包含应用的敏感信息，可以通过配置来选择暴露合适的监测点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># JMX 方式</span></span><br><span class="line">management.endpoints.jmx.exposure.exclude=</span><br><span class="line">management.endpoints.jmx.exposure.include= <span class="string">"*"</span></span><br><span class="line"><span class="comment"># http 方式</span></span><br><span class="line">management.endpoints.web.exposure.exclude=</span><br><span class="line">management.endpoints.web.exposure.include=info, health</span><br><span class="line">``` </span><br><span class="line"><span class="comment">##### 2.3 开启EndPoint</span></span><br><span class="line">通过配置 management.endpoint.&lt;id&gt;.enabled属性来开启EndPoint</span><br><span class="line">``` bash</span><br><span class="line"><span class="comment"># 所有内置EndPoint默认关闭</span></span><br><span class="line">management.endpoints.enabled-by-default=<span class="literal">false</span></span><br><span class="line"><span class="comment">#开启prometheus监测点</span></span><br><span class="line">management.endpoint.prometheus.enabled=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -267,8 +304,8 @@
             </li>
             <li>
               <strong>本文链接：</strong>
-              <a href="https://2sinx.github.io/2020/07/03/画图工具/" title="画图工具" target="_blank">https://2sinx.github.io
-                /2020/07/03/画图工具/</a>
+              <a href="https://2sinx.github.io/2020/09/05/SpringBoot-Actuator-Prometheus/" title="SpringBoot-Actuator-Prometheus" target="_blank">https://2sinx.github.io
+                /2020/09/05/SpringBoot-Actuator-Prometheus/</a>
             </li>
             <li>
               <strong>版权声明： </strong>
@@ -334,7 +371,7 @@
   <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
   <p>扫一扫，分享到微信</p>
   <div class="wx-qrcode">
-    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/07/03/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" alt="微信分享二维码"> -->
+    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/09/05/SpringBoot-Actuator-Prometheus/" alt="微信分享二维码"> -->
   </div>
 </div>
 
@@ -349,18 +386,18 @@
   
   <nav id="article-nav">
     
-      <a href="/2020/07/25/JVM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2020/09/05/Python-SimpleHttpServer/" id="article-nav-newer" class="article-nav-link-wrap">
         <i class="icon-circle-left"></i>
         <div class="article-nav-title">
           
-            JVM
+            Python-SimpleHttpServer
           
         </div>
       </a>
     
     
-      <a href="/2020/05/24/SpringBoot-Actuator-Prometheus/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">SpringBoot-Actuator-Prometheus</div>
+      <a href="/2019/11/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Hello World</div>
         <i class="icon-circle-right"></i>
       </a>
     
