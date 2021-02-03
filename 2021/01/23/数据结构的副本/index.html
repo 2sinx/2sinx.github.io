@@ -7,25 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://2sinx.github.io">
   <title>
-    画图工具 |
+    数据结构的副本 |
     
     2sinx</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+  <meta name="description" content="数据结构跳跃表 参考跳表是在有序列表的基础上,为了提高链表的查询速度改造而来的,查询,插入和删除操作 都可以达到O(logn)级复杂度. 在一个跳表中包含索引层和基础链表层. 每个索引节点包含层级,向右兄弟节点和向下查询下级索引节点或者基础信息节点     层级是通过模拟连续抛硬币获得第一次硬币向上所需要的抛的次数来决定的.那么新节点在 第n层的概率为:$$P(n)&#x3D;\frac{1}{2^n}$$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画图工具">
-<meta property="og:url" content="https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:title" content="数据结构的副本">
+<meta property="og:url" content="https://2sinx.github.io/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="2sinx">
-<meta property="og:description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+<meta property="og:description" content="数据结构跳跃表 参考跳表是在有序列表的基础上,为了提高链表的查询速度改造而来的,查询,插入和删除操作 都可以达到O(logn)级复杂度. 在一个跳表中包含索引层和基础链表层. 每个索引节点包含层级,向右兄弟节点和向下查询下级索引节点或者基础信息节点     层级是通过模拟连续抛硬币获得第一次硬币向上所需要的抛的次数来决定的.那么新节点在 第n层的概率为:$$P(n)&#x3D;\frac{1}{2^n}$$">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
-<meta property="article:published_time" content="2020-09-05T02:29:46.264Z">
-<meta property="article:modified_time" content="2020-09-05T02:29:46.264Z">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-406ac352da4f3c45da01ba5e2c168d9d_1440w.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-e5efbba6181b40a8468cebc7f99e69d3_1440w.jpg">
+<meta property="article:published_time" content="2021-01-23T07:32:01.636Z">
+<meta property="article:modified_time" content="2021-01-24T06:17:52.044Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-406ac352da4f3c45da01ba5e2c168d9d_1440w.jpg">
   
     <link rel="alternative" href="/atom.xml" title="2sinx" type="application/atom+xml">
   
@@ -192,7 +193,7 @@
                   class="anm-canvas"></canvas>
         </div>
         <div id="js-content" class="content-ll">
-          <article id="post-画图工具"
+          <article id="post-数据结构的副本"
          class="article article-type-post " itemscope
          itemprop="blogPost">
   <div class="article-inner">
@@ -201,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      画图工具
+      数据结构的副本
     </h1>
   
 
@@ -213,9 +214,9 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-09-05T02:29:46.264Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-09-05</time>
+<a href="/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  <time datetime="2021-01-23T07:32:01.636Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-01-23</time>
 </a>
 
         
@@ -228,7 +229,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">50字</span>
+      <span class="post-count">477字</span>
     </span>
   </span>
 
@@ -248,10 +249,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="idea中安装plantuml"><a href="#idea中安装plantuml" class="headerlink" title="idea中安装plantuml"></a>idea中安装plantuml</h4><p>如果出现下面问题,还需要安装Graphviz<br><img src="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png" width="30%"></p>
-<pre><code class="bash">brew install Graphviz</code></pre>
-<p>前提是安装过brew，如果没有安装 参考<br><a href="https://www.mayanpeng.cn/archives/131.html" target="_blank" rel="noopener">brew安装</a><br><a href="https://plantuml.com" target="_blank" rel="noopener">plantuml官网</a><br><a href="https://www.jianshu.com/p/a6bd7e3048ef" target="_blank" rel="noopener">plantuml插件安装</a><br><a href="https://www.cnblogs.com/tulintao/p/11134877.html" target="_blank" rel="noopener">brew数据源替换</a></p>
+        <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="跳跃表-参考"><a href="#跳跃表-参考" class="headerlink" title="跳跃表 参考"></a><a href="https://zhuanlan.zhihu.com/p/68516038" target="_blank" rel="noopener">跳跃表</a> <a href="http://www.360doc.com/content/20/1204/11/13328254_949434656.shtml" target="_blank" rel="noopener">参考</a></h3><p>跳表是在有序列表的基础上,为了提高链表的查询速度改造而来的,查询,插入和删除操作 都可以达到O(logn)级复杂度.</p>
+<p>在一个跳表中包含索引层和基础链表层. 每个索引节点包含<strong>层级</strong>,向右兄弟节点和向下查询下级索引节点或者基础信息节点</p>
+<img src="https://pic2.zhimg.com/80/v2-406ac352da4f3c45da01ba5e2c168d9d_1440w.jpg" alt="img" style="zoom:50%;" />
+
+<img src="https://pic4.zhimg.com/80/v2-e5efbba6181b40a8468cebc7f99e69d3_1440w.jpg" alt="img" style="zoom:50%;" />
+
+<p>层级是通过模拟连续抛硬币获得第一次硬币向上所需要的抛的次数来决定的.那么新节点在 第n层的概率为:<br>$$<br>P(n)=\frac{1}{2^n}<br>$$<br>如果基础链表元素为m个,则每个索引层的节点数量大概为:<br>$$<br> P(n)=\frac{m}{2^n}<br>$$<br>为什么Redis选择使用跳表而不是红黑树来实现有序集合？</p>
+<p>首先，我们来分析下Redis的有序集合支持的操作：</p>
+<p>1）插入元素</p>
+<p>2）删除元素</p>
+<p>3）查找元素</p>
+<p>4）有序输出所有元素</p>
+<p>5）查找区间内所有元素</p>
+<p>其中，前4项红黑树都可以完成，且时间复杂度与跳表一致。</p>
+<p>但是，最后一项，红黑树的效率就没有跳表高了。</p>
+<p>在跳表中，要查找区间的元素，我们只要定位到两个区间端点在最低层级的位置，然后按顺序遍历元素就可以了，非常高效。</p>
+<p>而红黑树只能定位到端点后，再从首位置开始每次都要查找后继节点，相对来说是比较耗时的(中序遍历)。</p>
+<p>此外，跳表实现起来很容易且易读，红黑树实现起来相对困难，所以Redis选择使用跳表来实现有序集合。</p>
+<p>类比 跳跃表类似于 B+树    红黑树类似于B树, 采用B+树进行范围查询时比较快</p>
 
       
 
@@ -266,8 +282,8 @@
             </li>
             <li>
               <strong>本文链接：</strong>
-              <a href="https://2sinx.github.io/2020/09/05/画图工具/" title="画图工具" target="_blank">https://2sinx.github.io
-                /2020/09/05/画图工具/</a>
+              <a href="https://2sinx.github.io/2021/01/23/数据结构的副本/" title="数据结构的副本" target="_blank">https://2sinx.github.io
+                /2021/01/23/数据结构的副本/</a>
             </li>
             <li>
               <strong>版权声明： </strong>
@@ -333,7 +349,7 @@
   <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
   <p>扫一扫，分享到微信</p>
   <div class="wx-qrcode">
-    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" alt="微信分享二维码"> -->
+    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%89%AF%E6%9C%AC/" alt="微信分享二维码"> -->
   </div>
 </div>
 
@@ -348,18 +364,18 @@
   
   <nav id="article-nav">
     
-      <a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2021/01/23/%E9%94%81%E7%9A%84%E5%86%85%E5%AD%98%E8%AF%AD%E4%B9%89%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
         <i class="icon-circle-left"></i>
         <div class="article-nav-title">
           
-            分布式锁的副本
+            锁的内存语义的副本
           
         </div>
       </a>
     
     
-      <a href="/2020/09/05/%E8%8E%B7%E5%8F%96%E5%86%85%E5%AD%98%E5%BF%AB%E7%85%A7/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">获取内存快照</div>
+      <a href="/2021/01/22/Voliate%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Voliate的副本</div>
         <i class="icon-circle-right"></i>
       </a>
     

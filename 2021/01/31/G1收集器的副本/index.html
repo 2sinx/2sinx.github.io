@@ -7,25 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://2sinx.github.io">
   <title>
-    画图工具 |
+    G1收集器的副本 |
     
     2sinx</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+  <meta name="description" content="目标 参考 参考G1收集器适用于多核,内存使用较多的应用,以低停顿为首要目标,同时兼顾较高吞吐量,简化配置.通常适用于这些应用:  堆空间超过10GB,并且通常超过50%空间被存活对象占据 堆中存在大量碎片 要求垃圾回收停顿小于几百毫秒 对象分配和提升的比率变化大  重要概念分区(Region)G1将内存划分为多个大小相等的独立区域(Region 大小范围为1M-32M),每块region都会被打">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画图工具">
-<meta property="og:url" content="https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:title" content="G1收集器的副本">
+<meta property="og:url" content="https://2sinx.github.io/2021/01/31/G1%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="2sinx">
-<meta property="og:description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+<meta property="og:description" content="目标 参考 参考G1收集器适用于多核,内存使用较多的应用,以低停顿为首要目标,同时兼顾较高吞吐量,简化配置.通常适用于这些应用:  堆空间超过10GB,并且通常超过50%空间被存活对象占据 堆中存在大量碎片 要求垃圾回收停顿小于几百毫秒 对象分配和提升的比率变化大  重要概念分区(Region)G1将内存划分为多个大小相等的独立区域(Region 大小范围为1M-32M),每块region都会被打">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
-<meta property="article:published_time" content="2020-09-05T02:29:46.264Z">
-<meta property="article:modified_time" content="2020-09-05T02:29:46.264Z">
+<meta property="og:image" content="https://2sinx.github.io/2021/01/31/G1%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E5%89%AF%E6%9C%AC/picture/image-20210203200805280.png">
+<meta property="article:published_time" content="2021-01-31T06:14:02.964Z">
+<meta property="article:modified_time" content="2021-02-03T12:08:08.662Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
+<meta name="twitter:image" content="https://2sinx.github.io/2021/01/31/G1%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E5%89%AF%E6%9C%AC/picture/image-20210203200805280.png">
   
     <link rel="alternative" href="/atom.xml" title="2sinx" type="application/atom+xml">
   
@@ -192,7 +192,7 @@
                   class="anm-canvas"></canvas>
         </div>
         <div id="js-content" class="content-ll">
-          <article id="post-画图工具"
+          <article id="post-G1收集器的副本"
          class="article article-type-post " itemscope
          itemprop="blogPost">
   <div class="article-inner">
@@ -201,7 +201,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      画图工具
+      G1收集器的副本
     </h1>
   
 
@@ -213,9 +213,9 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-09-05T02:29:46.264Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-09-05</time>
+<a href="/2021/01/31/G1%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  <time datetime="2021-01-31T06:14:02.964Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-01-31</time>
 </a>
 
         
@@ -228,7 +228,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">50字</span>
+      <span class="post-count">1.4k字</span>
     </span>
   </span>
 
@@ -237,7 +237,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
   </div>
@@ -248,10 +248,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="idea中安装plantuml"><a href="#idea中安装plantuml" class="headerlink" title="idea中安装plantuml"></a>idea中安装plantuml</h4><p>如果出现下面问题,还需要安装Graphviz<br><img src="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png" width="30%"></p>
-<pre><code class="bash">brew install Graphviz</code></pre>
-<p>前提是安装过brew，如果没有安装 参考<br><a href="https://www.mayanpeng.cn/archives/131.html" target="_blank" rel="noopener">brew安装</a><br><a href="https://plantuml.com" target="_blank" rel="noopener">plantuml官网</a><br><a href="https://www.jianshu.com/p/a6bd7e3048ef" target="_blank" rel="noopener">plantuml插件安装</a><br><a href="https://www.cnblogs.com/tulintao/p/11134877.html" target="_blank" rel="noopener">brew数据源替换</a></p>
+        <h2 id="目标-参考-参考"><a href="#目标-参考-参考" class="headerlink" title="目标 参考 参考"></a>目标 <a href="https://zhuanlan.zhihu.com/p/52841787?from_voters_page=true" target="_blank" rel="noopener">参考</a> <a href="https://zhuanlan.zhihu.com/p/54048685" target="_blank" rel="noopener">参考</a></h2><p>G1收集器适用于多核,内存使用较多的应用,以<strong>低停顿</strong>为首要目标,同时兼顾<strong>较高吞吐量</strong>,<strong>简化配置</strong>.通常适用于这些应用:</p>
+<ul>
+<li>堆空间超过10GB,并且通常超过50%空间被存活对象占据</li>
+<li>堆中存在大量碎片</li>
+<li>要求垃圾回收停顿小于几百毫秒</li>
+<li>对象分配和提升的比率变化大</li>
+</ul>
+<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="分区-Region"><a href="#分区-Region" class="headerlink" title="分区(Region)"></a>分区(Region)</h3><p>G1将内存划分为多个大小相等的独立区域(Region 大小范围为1M-32M),每块region都会被打唯一的分代标志(eden,survivor,old),仍保留了分代思想,保留了新生代和老年代,但他们不是物理隔离的,而是一部分Region的集合,且不需要Region连续,如下图所示:新生代包含Eden区(红色)和survivor区(红S).蓝色为老年代,大对象被直接分配到老年代中H区, H区由多个连续的Region组成.</p>
+<p><img src="picture/image-20210203200805280.png" alt="image-20210203200805280"></p>
+<p>每个分区都可能是年轻代也可能是老年代，但是在同一时刻只能属于某个代。 年轻代、幸存区、老年代这些概念还存在，成为逻辑上的概念，这样方便复用之前分代框架的逻辑。在物理上不需要连续，则带来了额外的好处——有的分区内垃圾对象特别多，有的分区内垃圾对象很少，G1会优先回收垃圾对象特别多的分区，这样可以花费较少的时间来回收这些分区的垃圾，这也就是G1名字的由来，即首先收集垃圾最多的分区。</p>
+<p>对于新生代来说，并不是使用了这种算法，依然是新生代满了一起进行回收，整个新生代中的对象，要么被回收、要么晋升，至于新生代也采取分区机制的原因，则是因为这样跟老年代的策略统一，方便调整代的大小。</p>
+<p>G1还是一种带压缩的收集器，在回收老年代的分区时，是将存活的对象从一个分区拷贝到另一个可用分区，这个拷贝的过程就实现了局部的压缩。每个分区的大小从1M到32M不等，但是都是2的冥次方。</p>
+<h3 id="垃圾回收周期"><a href="#垃圾回收周期" class="headerlink" title="垃圾回收周期"></a>垃圾回收周期</h3><h4 id="Young-only-phase"><a href="#Young-only-phase" class="headerlink" title="Young-only phase"></a>Young-only phase</h4><p>此阶段包括<strong>新生代垃圾回收(Yong GC)</strong>和<strong>并发标记(<code>Concurrent Marking Cycle</code>)</strong></p>
+<p>在普通的新生代垃圾回收过程中可能会有对象晋升到老年代中,经过多次Young GC后,老年代逐渐被填充,当达到IHOP阈值<code>-XX:InitiatingHeapOccupancyPercent</code>(老年代占整堆比，默认45%)时，便会触发并发标记</p>
+<h3 id="收集集合（CSet"><a href="#收集集合（CSet" class="headerlink" title="收集集合（CSet)"></a>收集集合（CSet)</h3><p>一组可被回收的分区的集合。在CSet中存活的数据会在GC过程中被移动到另一个可用分区，CSet中的分区可以来自Eden空间、survivor空间、或者老年代。CSet会占用不到整个堆空间的1%大小。</p>
+<h3 id="已记忆集合（RSet）"><a href="#已记忆集合（RSet）" class="headerlink" title="已记忆集合（RSet）"></a>已记忆集合（RSet）</h3><p>RSet记录了其他Region中的对象引用本Region中对象的关系，属于points-into结构（谁引用了我的对象）。RSet的价值在于使得垃圾收集器不需要扫描整个堆找到谁引用了当前分区中的对象，只需要扫描RSet即可。</p>
+<h2 id="参数参考"><a href="#参数参考" class="headerlink" title="参数参考"></a>参数<a href="https://zhuanlan.zhihu.com/p/181305087" target="_blank" rel="noopener">参考</a></h2><p>开启</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启G1</span></span><br><span class="line">-XX:+UseG1GC </span><br><span class="line"><span class="comment"># 最大GC停顿时间,JVM尽量做到小于这个值</span></span><br><span class="line">-XX:MaxGCPauseMillis=time  </span><br><span class="line"><span class="comment"># 堆被占用多少开始出发GC,默认45%</span></span><br><span class="line">-XX:InitiatingHeapOccupancyPercent=percent </span><br><span class="line"><span class="comment"># G1为分配担保预留的空间比例, 默认10% 老年代会预留10%的空间来给新生代的对象晋升</span></span><br><span class="line">-XX:G1ReservePercent=percent </span><br><span class="line"><span class="comment"># Region区域大小 值为2的幂 范围1-32MB 用于根据最小的java堆划分大约2048个区域</span></span><br><span class="line">-XX:G1HeapRegionSize=size</span><br></pre></td></tr></table></figure>
+
+<p>堆大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 初始堆大小</span></span><br><span class="line">-XX:InitialHeapSize </span><br><span class="line"><span class="comment">## 最大堆</span></span><br><span class="line">-XX:MaxHeapSize</span><br><span class="line"><span class="comment">## 空闲堆空间的最小百分比,如果当前堆使用空闲空间小于此值,就会在每次垃圾回收后进行扩容</span></span><br><span class="line"> -XX:MinHeapFreeRatio</span><br><span class="line"><span class="comment">## 空闲堆空间的最大百分比,如果当前堆使用空闲空间大于此值,就会在每次垃圾回收后进行缩容</span></span><br><span class="line"> -XX:MaxHeapFreeRatio</span><br></pre></td></tr></table></figure>
+
+<p>为了满足停顿时间目标,每次Young GC后G1收集器会尝试调整新生代的大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 新生代比例</span></span><br><span class="line">-XX:G1NewSizePercent</span><br><span class="line"><span class="comment">## 新生代最大比例</span></span><br><span class="line">-XX:G1MaxNewSizePercent</span><br></pre></td></tr></table></figure>
+
+<p>MixGC</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在Space-Reclamation Phase 需要执行mix GC的次数 默认是8</span></span><br><span class="line">-XX:G1MixedGCCountTarget</span><br><span class="line"><span class="comment"># 如果一个Region的存活对象的空间占比低于此值，则会被纳入Cset</span></span><br><span class="line">-XX:G1MixedGCLiveThresholdPercent</span><br><span class="line"><span class="comment"># 设置垃圾空间占比来决定Space-Reclamation Phase是否执行mixGC</span></span><br><span class="line">-XX:G1HeapWastePercent</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="收集过程-参考"><a href="#收集过程-参考" class="headerlink" title="收集过程 参考"></a>收集过程 <a href="https://segmentfault.com/a/1190000022537037" target="_blank" rel="noopener">参考</a></h2><p>收集策略:G1追踪每个Region中垃圾堆积的价值大小(回收空间大小以及所需时间的经验值),在后台维护一个优先列表,跟据允许的回收价值最大的Region</p>
+<p>当Eden空间被占满之后，就会触发YGC。在G1中YGC依然采用复制存活对象到survivor空间的方式，当对象的存活年龄满足晋升条件时，把对象提升到old generation regions(老年代)。G1控制YGC开销的手段是动态改变young region的个数，YGC的过程中依然会STW(stop the world 应用停顿)，并采用多线程并发复制对象，减少GC停顿时间。</p>
+<p>G1保留了YGC并加上了一种全新的MIXGC用于收集老年代。整体采用标记整理算法,局部采用复制算法</p>
 
       
 
@@ -266,8 +297,8 @@
             </li>
             <li>
               <strong>本文链接：</strong>
-              <a href="https://2sinx.github.io/2020/09/05/画图工具/" title="画图工具" target="_blank">https://2sinx.github.io
-                /2020/09/05/画图工具/</a>
+              <a href="https://2sinx.github.io/2021/01/31/G1收集器的副本/" title="G1收集器的副本" target="_blank">https://2sinx.github.io
+                /2021/01/31/G1收集器的副本/</a>
             </li>
             <li>
               <strong>版权声明： </strong>
@@ -333,7 +364,7 @@
   <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
   <p>扫一扫，分享到微信</p>
   <div class="wx-qrcode">
-    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" alt="微信分享二维码"> -->
+    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2021/01/31/G1%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E5%89%AF%E6%9C%AC/" alt="微信分享二维码"> -->
   </div>
 </div>
 
@@ -348,18 +379,18 @@
   
   <nav id="article-nav">
     
-      <a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2021/02/01/zookeeper%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
         <i class="icon-circle-left"></i>
         <div class="article-nav-title">
           
-            分布式锁的副本
+            zookeeper的副本
           
         </div>
       </a>
     
     
-      <a href="/2020/09/05/%E8%8E%B7%E5%8F%96%E5%86%85%E5%AD%98%E5%BF%AB%E7%85%A7/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">获取内存快照</div>
+      <a href="/2021/01/28/InnoDB%E4%B8%AD%E7%9A%84%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">InnoDB中的锁的副本</div>
         <i class="icon-circle-right"></i>
       </a>
     

@@ -7,25 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://2sinx.github.io">
   <title>
-    画图工具 |
+    BloomFilter的副本 |
     
     2sinx</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+  <meta name="description" content="Bloom Filter 参考 Bloom Filter Calculator Bloom Filters 哈希函数哈希函数的概念是：将任意大小的输入数据转换成特定大小的输出数据的函数，转换后的数据称为哈希值或哈希编码，也叫散列值。 如果两个散列值是不相同的（根据同一函数），那么这两个散列值的原始输入也是不相同的。这个特性是散列函数具有确定性的结果，具有这种性质的散列函数称为单向散列函数。   散">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画图工具">
-<meta property="og:url" content="https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:title" content="BloomFilter的副本">
+<meta property="og:url" content="https://2sinx.github.io/2021/01/18/BloomFilter%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="2sinx">
-<meta property="og:description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+<meta property="og:description" content="Bloom Filter 参考 Bloom Filter Calculator Bloom Filters 哈希函数哈希函数的概念是：将任意大小的输入数据转换成特定大小的输出数据的函数，转换后的数据称为哈希值或哈希编码，也叫散列值。 如果两个散列值是不相同的（根据同一函数），那么这两个散列值的原始输入也是不相同的。这个特性是散列函数具有确定性的结果，具有这种性质的散列函数称为单向散列函数。   散">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
-<meta property="article:published_time" content="2020-09-05T02:29:46.264Z">
-<meta property="article:modified_time" content="2020-09-05T02:29:46.264Z">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-be7f226e5bbadd69c7c2202ebb01c42d_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-73f4ab0824e1353fb80a60dced10b5e2_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=O(K)">
+<meta property="article:published_time" content="2021-01-18T13:29:29.763Z">
+<meta property="article:modified_time" content="2021-01-24T06:10:44.579Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
+<meta name="twitter:image" content="https://pic4.zhimg.com/v2-be7f226e5bbadd69c7c2202ebb01c42d_r.jpg?source=1940ef5c">
   
     <link rel="alternative" href="/atom.xml" title="2sinx" type="application/atom+xml">
   
@@ -192,7 +194,7 @@
                   class="anm-canvas"></canvas>
         </div>
         <div id="js-content" class="content-ll">
-          <article id="post-画图工具"
+          <article id="post-BloomFilter的副本"
          class="article article-type-post " itemscope
          itemprop="blogPost">
   <div class="article-inner">
@@ -201,7 +203,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      画图工具
+      BloomFilter的副本
     </h1>
   
 
@@ -213,9 +215,9 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-09-05T02:29:46.264Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-09-05</time>
+<a href="/2021/01/18/BloomFilter%E7%9A%84%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  <time datetime="2021-01-18T13:29:29.763Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-01-18</time>
 </a>
 
         
@@ -228,7 +230,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">50字</span>
+      <span class="post-count">856字</span>
     </span>
   </span>
 
@@ -237,7 +239,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
   </div>
@@ -248,11 +250,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="idea中安装plantuml"><a href="#idea中安装plantuml" class="headerlink" title="idea中安装plantuml"></a>idea中安装plantuml</h4><p>如果出现下面问题,还需要安装Graphviz<br><img src="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png" width="30%"></p>
-<pre><code class="bash">brew install Graphviz</code></pre>
-<p>前提是安装过brew，如果没有安装 参考<br><a href="https://www.mayanpeng.cn/archives/131.html" target="_blank" rel="noopener">brew安装</a><br><a href="https://plantuml.com" target="_blank" rel="noopener">plantuml官网</a><br><a href="https://www.jianshu.com/p/a6bd7e3048ef" target="_blank" rel="noopener">plantuml插件安装</a><br><a href="https://www.cnblogs.com/tulintao/p/11134877.html" target="_blank" rel="noopener">brew数据源替换</a></p>
+        <h1 id="Bloom-Filter"><a href="#Bloom-Filter" class="headerlink" title="Bloom Filter"></a>Bloom Filter</h1><p> <a href="https://www.zhihu.com/question/38211640" target="_blank" rel="noopener">参考</a> <a href="https://hur.st/bloomfilter/" target="_blank" rel="noopener">Bloom Filter Calculator</a> <a href="https://www.jasondavies.com/bloomfilter/" target="_blank" rel="noopener">Bloom Filters</a></p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><p>哈希函数的概念是：将任意大小的输入数据转换成特定大小的输出数据的函数，转换后的数据称为哈希值或哈希编码，也叫散列值。</p>
+<p>如果两个散列值是不相同的（根据同一函数），那么这两个散列值的原始输入也是不相同的。这个特性是散列函数具有确定性的结果，具有这种性质的散列函数称为<strong>单向散列函数</strong>。  </p>
+<p>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同，这种情况称为“<strong>散列碰撞</strong>（collision）”。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>BloomFilter 是由一个固定大小的二进制向量或者位图（bitmap）和一系列映射函数组成的。在初始状态时，对于长度为 m 的位数组，它的所有位都被置为0，如下图所示:<br><img src="https://pic4.zhimg.com/v2-be7f226e5bbadd69c7c2202ebb01c42d_r.jpg?source=1940ef5c" alt="preview" style="zoom:50%;" /></p>
+<p>当有变量被加入集合时，通过 K 个映射函数将这个变量映射成位图中的 K 个点，把它们置为 1（假定有两个变量都通过 3 个映射函数）。</p>
+<img src="https://pic1.zhimg.com/v2-73f4ab0824e1353fb80a60dced10b5e2_r.jpg?source=1940ef5c" alt="preview" style="zoom:50%;" />
 
+<p>查询某个变量的时候我们只要看看这些点是不是都是 1 就可以大概率知道集合中有没有它了</p>
+<ul>
+<li>如果这些点有任何一个 0，则被查询变量一定不在；</li>
+<li>如果都是 1，则被查询变量很<strong>可能存在</strong></li>
+</ul>
+<h3 id="误判率"><a href="#误判率" class="headerlink" title="误判率"></a><strong>误判率</strong></h3><p>布隆过滤器的误判是指多个输入经过哈希之后在相同的bit位置1了，这样就无法判断究竟是哪个输入产生的，因此误判的根源在于相同的 bit 位被多次映射且置 1。</p>
+<p>这种情况也造成了布隆过滤器的删除问题，因为布隆过滤器的每一个 bit 并不是独占的，很有可能多个元素共享了某一位。如果我们直接删除这一位的话，会影响其他的元素。(比如上图中的第 3 位)</p>
+<h3 id="关键参数"><a href="#关键参数" class="headerlink" title="关键参数"></a>关键参数</h3><p>位数组长度: <strong>m</strong>  哈希函数个数: <strong>k</strong>  已添加元素数量: <strong>n</strong>  误判率( false positive probability ) :  <strong>fpp</strong><br>$$<br>m=-\frac{n\ln{P_fp}}{({\ln2})^2}<br>$$</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a><strong>特性</strong></h3><ul>
+<li><strong>一个元素如果判断结果为存在的时候元素不一定存在，但是判断结果为不存在的时候则一定不存在</strong>。</li>
+<li><strong>布隆过滤器可以添加元素，但是不能删除元素</strong>。因为删掉元素会导致误判率增加。</li>
+</ul>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a><strong>优点</strong></h3><p>相比于其它的数据结构，布隆过滤器在空间和时间方面都有巨大的优势。布隆过滤器存储空间和插入/查询时间都是常数 <img src="https://www.zhihu.com/equation?tex=O%28K%29" alt="[公式]">，另外，散列函数相互之间没有关系，方便由硬件并行实现。布隆过滤器不需要存储元素本身，在某些对保密要求非常严格的场合有优势</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h3><p>随着存入的元素数量增加，误算率随之增加。一般情况下不能从布隆过滤器中删除元素.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="Guava-中的-BloomFilter"><a href="#Guava-中的-BloomFilter" class="headerlink" title="Guava 中的 BloomFilter"></a><strong>Guava 中的 BloomFilter</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.guava&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;guava&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redission中的-RedissonBloomFilter"><a href="#Redission中的-RedissonBloomFilter" class="headerlink" title="Redission中的 RedissonBloomFilter"></a><strong>Redission中的 RedissonBloomFilter</strong></h3><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="设置参数白名单-预防缓存击穿"><a href="#设置参数白名单-预防缓存击穿" class="headerlink" title="设置参数白名单,预防缓存击穿"></a>设置参数白名单,预防缓存击穿</h3>
       
 
       
@@ -266,8 +288,8 @@
             </li>
             <li>
               <strong>本文链接：</strong>
-              <a href="https://2sinx.github.io/2020/09/05/画图工具/" title="画图工具" target="_blank">https://2sinx.github.io
-                /2020/09/05/画图工具/</a>
+              <a href="https://2sinx.github.io/2021/01/18/BloomFilter的副本/" title="BloomFilter的副本" target="_blank">https://2sinx.github.io
+                /2021/01/18/BloomFilter的副本/</a>
             </li>
             <li>
               <strong>版权声明： </strong>
@@ -333,7 +355,7 @@
   <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
   <p>扫一扫，分享到微信</p>
   <div class="wx-qrcode">
-    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" alt="微信分享二维码"> -->
+    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2021/01/18/BloomFilter%E7%9A%84%E5%89%AF%E6%9C%AC/" alt="微信分享二维码"> -->
   </div>
 </div>
 
@@ -348,18 +370,18 @@
   
   <nav id="article-nav">
     
-      <a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2021/01/18/%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
         <i class="icon-circle-left"></i>
         <div class="article-nav-title">
           
-            分布式锁的副本
+            事务的ACID的副本
           
         </div>
       </a>
     
     
-      <a href="/2020/09/05/%E8%8E%B7%E5%8F%96%E5%86%85%E5%AD%98%E5%BF%AB%E7%85%A7/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">获取内存快照</div>
+      <a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">分布式锁的副本</div>
         <i class="icon-circle-right"></i>
       </a>
     

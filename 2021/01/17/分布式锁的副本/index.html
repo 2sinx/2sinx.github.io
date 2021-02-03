@@ -7,25 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://2sinx.github.io">
   <title>
-    画图工具 |
+    分布式锁的副本 |
     
     2sinx</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+  <meta name="description" content="基于Redis的分布式锁 参考1 参考2 方式1 适用于单节点​        当前多个线程同时竞争某个资源时,首先需要获取资源对应的锁,锁相当于某一特定资源的使用权限,怎么定义一个线程成功获取到锁呢? 在redis中可以通过某个线程是否首先成功创建某一key来模拟此线程是否成功锁定资源,在redis操作中可以通过Set 命令来实现.  锁的释放通过命令DEL删除key来实现. 12SET key">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画图工具">
-<meta property="og:url" content="https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:title" content="分布式锁的副本">
+<meta property="og:url" content="https://2sinx.github.io/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="2sinx">
-<meta property="og:description" content="idea中安装plantuml如果出现下面问题,还需要安装Graphviz brew install Graphviz 前提是安装过brew，如果没有安装 参考brew安装plantuml官网plantuml插件安装brew数据源替换">
+<meta property="og:description" content="基于Redis的分布式锁 参考1 参考2 方式1 适用于单节点​        当前多个线程同时竞争某个资源时,首先需要获取资源对应的锁,锁相当于某一特定资源的使用权限,怎么定义一个线程成功获取到锁呢? 在redis中可以通过某个线程是否首先成功创建某一key来模拟此线程是否成功锁定资源,在redis操作中可以通过Set 命令来实现.  锁的释放通过命令DEL删除key来实现. 12SET key">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
-<meta property="article:published_time" content="2020-09-05T02:29:46.264Z">
-<meta property="article:modified_time" content="2020-09-05T02:29:46.264Z">
+<meta property="og:image" content="https://segmentfault.com/img/remote/1460000022024307">
+<meta property="article:published_time" content="2021-01-17T07:12:04.519Z">
+<meta property="article:modified_time" content="2021-02-01T09:34:13.937Z">
 <meta property="article:author" content="2sinx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png">
+<meta name="twitter:image" content="https://segmentfault.com/img/remote/1460000022024307">
   
     <link rel="alternative" href="/atom.xml" title="2sinx" type="application/atom+xml">
   
@@ -192,7 +192,7 @@
                   class="anm-canvas"></canvas>
         </div>
         <div id="js-content" class="content-ll">
-          <article id="post-画图工具"
+          <article id="post-分布式锁的副本"
          class="article article-type-post " itemscope
          itemprop="blogPost">
   <div class="article-inner">
@@ -201,7 +201,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      画图工具
+      分布式锁的副本
     </h1>
   
 
@@ -213,9 +213,9 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-09-05T02:29:46.264Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-09-05</time>
+<a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  <time datetime="2021-01-17T07:12:04.519Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-01-17</time>
 </a>
 
         
@@ -228,7 +228,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">50字</span>
+      <span class="post-count">2.4k字</span>
     </span>
   </span>
 
@@ -237,7 +237,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">9分</span>
     </span>
   </span>
   </div>
@@ -248,10 +248,87 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="idea中安装plantuml"><a href="#idea中安装plantuml" class="headerlink" title="idea中安装plantuml"></a>idea中安装plantuml</h4><p>如果出现下面问题,还需要安装Graphviz<br><img src="https://2sinx.github.io/myresource/img/WX20200702-223009@2x.png" width="30%"></p>
-<pre><code class="bash">brew install Graphviz</code></pre>
-<p>前提是安装过brew，如果没有安装 参考<br><a href="https://www.mayanpeng.cn/archives/131.html" target="_blank" rel="noopener">brew安装</a><br><a href="https://plantuml.com" target="_blank" rel="noopener">plantuml官网</a><br><a href="https://www.jianshu.com/p/a6bd7e3048ef" target="_blank" rel="noopener">plantuml插件安装</a><br><a href="https://www.cnblogs.com/tulintao/p/11134877.html" target="_blank" rel="noopener">brew数据源替换</a></p>
+        <h2 id="基于Redis的分布式锁"><a href="#基于Redis的分布式锁" class="headerlink" title="基于Redis的分布式锁"></a>基于Redis的分布式锁</h2><p> <a href="https://segmentfault.com/a/1190000022024288" target="_blank" rel="noopener">参考1</a> <a href="http://www.redis.cn/topics/distlock.html" target="_blank" rel="noopener">参考2</a></p>
+<h3 id="方式1-适用于单节点"><a href="#方式1-适用于单节点" class="headerlink" title="方式1 适用于单节点"></a>方式1 适用于单节点</h3><p>​        当前多个线程同时竞争某个资源时,首先需要获取资源对应的锁,锁相当于某一特定资源的使用权限,怎么定义一个线程成功获取到锁呢?</p>
+<p>在redis中可以通过某个线程是否首先成功创建某一key来模拟此线程是否成功锁定资源,在redis操作中可以通过<a href="http://www.redis.cn/commands/set.html" target="_blank" rel="noopener">Set</a> 命令来实现.  锁的释放通过命令DEL删除key来实现.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] NX </span><br><span class="line">DEL key;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>为了避免redis数据库使用内存溢出, key必须设置过期时间</li>
+<li>2.6.12 版本后,set 命令支持通过原子的方式同时设置键,值和过期时间</li>
+<li>由于key设置了过期时间,在线程处理时间超过过期时间时,锁会被删除,或者被其他线程重新获取,当前线程再释放锁时可能会把其他线程持有的锁删除.为了避免这种情况,通过将value设置一个随机值,在释放锁的时候校验value的值来确定是否应该执行释放锁的操作.</li>
+</ul>
+<p>​      此方式存在一些问题:</p>
+<ul>
+<li><p>不能保证一个锁只被一个线程持有, 在 线程执行时间超过key的过期时间时,key会被删除或者被其他线程抢占.</p>
+</li>
+<li><p>不支持锁的重入</p>
+</li>
+</ul>
+<h3 id="方式2-RedissionLock-适用于单节点"><a href="#方式2-RedissionLock-适用于单节点" class="headerlink" title="方式2:RedissionLock  适用于单节点"></a>方式2:RedissionLock  适用于单节点</h3><p>在RedissionLock实现中通过Lua脚本来保证redis操作的原子性.并且采用Hash数据结构来构建锁,其中用包含线程id的字符串作为hash中key, 用线程的重入状态作为value,相同线程执行lock操作时value加一,执行unlock时减一.<br>加锁操作如下,其中 KEYS[1]是锁名称, ARGV[1]是过期时间,ARGV[2]是包含线程id字符串.</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (redis.call(<span class="string">'exists'</span>, KEYS[<span class="number">1</span>]) == <span class="number">0</span>) <span class="keyword">then</span>   ## 如果锁不存在就进行加锁</span><br><span class="line">   redis.call(<span class="string">'hset'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">2</span>], <span class="number">1</span>);    ## 创建 hash锁 并设置过期时间</span><br><span class="line">   redis.call(<span class="string">'pexpire'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">1</span>]); </span><br><span class="line">   <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">if</span> (redis.call(<span class="string">'hexists'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">2</span>]) == <span class="number">1</span>) <span class="keyword">then</span>  ## 当前线程持有锁并且重入 value +<span class="number">1</span> 并更新过期时间</span><br><span class="line">   redis.call(<span class="string">'hincrby'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">2</span>], <span class="number">1</span>); </span><br><span class="line">   redis.call(<span class="string">'pexpire'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">1</span>]);             </span><br><span class="line">   <span class="keyword">return</span> <span class="literal">nil</span>; <span class="string">" +</span></span><br><span class="line"><span class="string"> end; </span></span><br><span class="line"><span class="string">return redis.call('pttl', KEYS[1]);            ## 查寻锁的剩余过期时间并返回</span></span><br></pre></td></tr></table></figure>
+
+<p>解锁锁操作如下,其中 KEYS[1]是锁名称,KEYS[2]是用于监控锁状态的订阅通道名, ARGV[1]是解锁消息,ARGV[2]是过期时间.ARGV[3]是包含线程id字符串.</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (redis.call(<span class="string">'exists'</span>, KEYS[<span class="number">1</span>]) == <span class="number">0</span>) <span class="keyword">then</span>       							  ## 如果锁不存在 就发布解锁信息</span><br><span class="line">    redis.call(<span class="string">'publish'</span>, KEYS[<span class="number">2</span>], ARGV[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">if</span> (redis.call(<span class="string">'hexists'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">3</span>]) == <span class="number">0</span>) <span class="keyword">then</span>  					## 如果当前线程没有持有锁,直接返回</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    <span class="keyword">end</span>; </span><br><span class="line">    <span class="keyword">local</span> counter = redis.call(<span class="string">'hincrby'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">3</span>], <span class="number">-1</span>);  ##有持有锁的线程计数减一</span><br><span class="line"><span class="keyword">if</span> (counter &gt; <span class="number">0</span>) <span class="keyword">then</span>                                             ## 计数器大于<span class="number">0</span>时,更新过期时间           </span><br><span class="line">    redis.call(<span class="string">'pexpire'</span>, KEYS[<span class="number">1</span>], ARGV[<span class="number">2</span>]); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span>                                                              ## 计数器不大于<span class="number">0</span>时,删除锁,发布解锁消息                       </span><br><span class="line">    redis.call(<span class="string">'del'</span>, KEYS[<span class="number">1</span>]); </span><br><span class="line">    redis.call(<span class="string">'publish'</span>, KEYS[<span class="number">2</span>], ARGV[<span class="number">1</span>]); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>为了防止程序执行时间大于锁的过期时间,导致锁被删除, RedissionLock 采用Watch Dog的 方式为每个锁设置 一个定时任务,在锁没有被释放前,定时更新锁的过期时间, RedissionLock的默认过期时间为30s,定时任务每个10秒更新锁的过期时间.</li>
+<li>在主从模式的redis服务获取锁后,master宕机,并且锁数据没有同步到slaver上,在master 重启后,会被其他线程获取,导致一个锁被两个线程获取</li>
+</ul>
+<h3 id="方式3-适用于集群-参考-RedLock"><a href="#方式3-适用于集群-参考-RedLock" class="headerlink" title="方式3 适用于集群 参考:RedLock"></a>方式3 适用于集群 <a href="http://www.redis.cn/topics/distlock.html" target="_blank" rel="noopener">参考:RedLock</a></h3><p>为了更好的理解我们想要改进的方面，我们先分析一下当前大多数基于Redis的分布式锁现状和实现方法.</p>
+<p>实现Redis分布式锁的最简单的方法就是在Redis中创建一个key，这个key有一个失效时间（TTL)，以保证锁最终会被自动释放掉（这个对应特性2）。当客户端释放资源(解锁）的时候，会删除掉这个key。</p>
+<p>从表面上看，似乎效果还不错，但是这里有一个问题：这个架构中存在一个严重的单点失败问题。如果Redis挂了怎么办？你可能会说，可以通过增加一个slave节点解决这个问题。但这通常是行不通的。这样做，我们不能实现资源的独享,因为Redis的主从同步通常是异步的。</p>
+<p>在这种场景（主从结构）中存在明显的竞态:</p>
+<ol>
+<li>客户端A从master获取到锁</li>
+<li>在master将锁同步到slave之前，master宕掉了。</li>
+<li>slave节点被晋级为master节点</li>
+<li>客户端B取得了同一个资源被客户端A已经获取到的另外一个锁。</li>
+</ol>
+<p>在Redis的分布式环境中，我们假设有N个Redis master。这些节点<font color=red>完全互相独立，不存在主从复制或者其他集群协调机制</font>。</p>
+<p>我们确保将在每（N)个实例上之前的方法获取和释放锁。</p>
+<p>为了取到锁，客户端应该执行以下操作:</p>
+<ol>
+<li><p>获取当前Unix时间，以毫秒为单位。</p>
+</li>
+<li><p>依次尝试从N个实例，使用相同的key和随机值获取锁。在步骤2，当向Redis设置锁时,<font color=red>客户端应该设置一个网络连接和响应超时时间</font>，这个超时时间应该小于锁的失效时间。例如你的锁自动失效时间为10秒，则超时时间应该在5-50毫秒之间。这样可以避免服务器端Redis已经挂掉的情况下，客户端还在死死地等待响应结果。如果服务器端没有在规定时间内响应，客户端应该尽快尝试另外一个Redis实例。</p>
+</li>
+<li><p>客户端使用当前时间减去开始获取锁时间（步骤1记录的时间）就得到获取锁使用的时间。当且仅当从大多数（这里是3个节点）的Redis节点都取到锁，并且使用的时间小于锁失效时间时，锁才算获取成功。</p>
+</li>
+<li><p>如果取到了锁，<font color=red>key的真正有效时间等于有效时间减去获取锁所使用的时间</font>。</p>
+</li>
+<li><p>如果因为某些原因，获取锁失败（<em>没有</em>在至少N/2+1个Redis实例取到锁或者取锁时间已经超过了有效时间），客户端应该在所有的Redis实例上进行解锁（即便某些Redis实例根本就没有加锁成功)。</p>
+</li>
+</ol>
+<p>还是不能解决故障重启后带来的锁的安全性的问题。你想一下下面这个场景：</p>
+<p>我们一共有 A、B、C 这三个节点。</p>
+<p>1.客户端 1 在 A，B 上加锁成功。C 上加锁失败。</p>
+<p>2.这时节点 B 崩溃重启了，但是由于持久化策略导致客户端 1 在 B 上的锁没有持久化下来。 客户端 2 发起申请同一把锁的操作，在 B，C 上加锁成功。</p>
+<p>3.这个时候就又出现同一把锁，同时被客户端 1 和客户端 2 所持有了。</p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><p>线程长时间阻塞并且持有的锁过期,导致锁被占用<br>如下图所示:</p>
+<p>1.客户端 1 先去申请锁，并且成功获取到锁。之后客户端进行了长时间的 GC 导致了 STW 的情况。</p>
+<p>2.在 STW 期间，客户端 1 获取的锁的超时时间到了，锁也就失效了。</p>
+<p>3.由于客户端 1 的锁已经过期失效了，所以客户端 2 去申请锁就可以成功获得锁。</p>
+<p>4.客户端 2 开始写文件，并完成文件的写入。</p>
+<p>5.客户端 1 从 STW 中恢复过来，他并不知道自己的锁过期了，还是会继续执行文件写入操作，导致客户端 2 写入的文件被破坏。而且可以看到，它没有满足锁在任意时刻只有一个客户端持有的原则，即<font color="red">没有满足互斥性</font>。</p>
+<p><img src="https://segmentfault.com/img/remote/1460000022024307" alt="img"></p>
+<p>严重依赖系统时钟,在系统始终跳跃时造成锁失效,导致一个锁被不同线程占用.</p>
+<p>1.客户端 1 从 Redis 节点 A, B, C 成功获取了锁。由于网络问题，无法访问 D 和 E。</p>
+<p>2.节点 C 上的时钟发生了向前跳跃，导致它上面维护的锁过期了。</p>
+<p>3.客户端 2 从 Redis 节点 C, D, E 成功获取了同一个资源的锁。由于网络问题，无法访问 A 和 B。 现在，客户端 1 和客户端 2 都认为自己持有了锁。</p>
+<p>这样的场景是可能出现的，因为 Redlock 严重依赖系统时钟，所以一旦系统的时间变得不准确了，那么该算法的安全性也就得不到保障了。</p>
+<h3 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;curator-recipes&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">RetryPolicy retryPolicy=<span class="keyword">new</span> ExponentialBackoffRetry(<span class="number">10000</span>,<span class="number">3</span>);</span><br><span class="line">CuratorFramework newClient = CuratorFrameworkFactory.newClient(<span class="string">"XXX"</span>, <span class="number">30</span>, <span class="number">10</span>, retryPolicy);</span><br><span class="line">InterProcessMutex interProcessMutex=<span class="keyword">new</span> InterProcessMutex(newClient,<span class="string">"/test/lock"</span>);</span><br><span class="line">interProcessMutex.acquire();</span><br><span class="line">TimeUnit.SECONDS.sleep(<span class="number">60</span>);</span><br><span class="line">interProcessMutex.release();</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
       
 
@@ -266,8 +343,8 @@
             </li>
             <li>
               <strong>本文链接：</strong>
-              <a href="https://2sinx.github.io/2020/09/05/画图工具/" title="画图工具" target="_blank">https://2sinx.github.io
-                /2020/09/05/画图工具/</a>
+              <a href="https://2sinx.github.io/2021/01/17/分布式锁的副本/" title="分布式锁的副本" target="_blank">https://2sinx.github.io
+                /2021/01/17/分布式锁的副本/</a>
             </li>
             <li>
               <strong>版权声明： </strong>
@@ -333,7 +410,7 @@
   <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
   <p>扫一扫，分享到微信</p>
   <div class="wx-qrcode">
-    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" alt="微信分享二维码"> -->
+    <!-- <img src="//pan.baidu.com/share/qrcode?url=https://2sinx.github.io/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" alt="微信分享二维码"> -->
   </div>
 </div>
 
@@ -348,18 +425,18 @@
   
   <nav id="article-nav">
     
-      <a href="/2021/01/17/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2021/01/18/BloomFilter%E7%9A%84%E5%89%AF%E6%9C%AC/" id="article-nav-newer" class="article-nav-link-wrap">
         <i class="icon-circle-left"></i>
         <div class="article-nav-title">
           
-            分布式锁的副本
+            BloomFilter的副本
           
         </div>
       </a>
     
     
-      <a href="/2020/09/05/%E8%8E%B7%E5%8F%96%E5%86%85%E5%AD%98%E5%BF%AB%E7%85%A7/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">获取内存快照</div>
+      <a href="/2020/09/05/%E7%94%BB%E5%9B%BE%E5%B7%A5%E5%85%B7/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">画图工具</div>
         <i class="icon-circle-right"></i>
       </a>
     
